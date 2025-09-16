@@ -1,24 +1,56 @@
 /* Base Styles */
 body {
-  color: royalblue;
+  color: #1F2937;
   text-align: center;
-  background-color: bisque;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: #FFFAF3;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 /* Typography */
 
 /* Links & Accents */
+a{color: #6BB187; text-decoration: none;}
+a:hover, a:focus {text-decoration: underline;}
+
+.accent { color: #EF9FB0; }
+
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+
+h1, h2, h3 {
+  font-family: "Domine", serif;
+  font-weight: 700; /* nice bold headings */
+}
 
 /* Images */
 
 /* Hero Section */
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
 
+#hero-container {
+  max-width: fit-content;
+  margin: auto;
+}
 /* Main Content */
 
 /* About Section */
 
 /* Specials Section */
+.specials-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 /* Visit Us Section */
 
