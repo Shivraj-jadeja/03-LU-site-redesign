@@ -12,21 +12,45 @@ body {
 }
 
 /* Typography */
-
-/* Links & Accents */
-a{color: #6BB187; text-decoration: none;}
-a:hover, a:focus {text-decoration: underline;}
-
-.accent { color: #EF9FB0; }
-
-a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
-
 h1, h2, h3 {
   font-family: "Domine", serif;
-  font-weight: 700; /* nice bold headings */
+  font-weight: 700;
 }
 
-/* Images */
+a {
+  color: #6BB187;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.accent {
+  color: #EF9FB0;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #6B7280;
+}
+
+/* Navigation */
+.nav-site {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 0;
+}
+
+.nav-site a {
+  padding: 8px 12px;
+}
 
 /* Hero Section */
 .hero-img {
@@ -40,9 +64,6 @@ h1, h2, h3 {
   max-width: fit-content;
   margin: auto;
 }
-/* Main Content */
-
-/* About Section */
 
 /* Specials Section */
 .specials-list {
@@ -52,8 +73,57 @@ h1, h2, h3 {
   flex-wrap: wrap;
 }
 
-/* Visit Us Section */
+/* Seasonal Picks */
+#seasonal {
+  margin: 48px auto;
+  max-width: 420px;
+  text-align: center;
+}
 
+.seasonal-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.seasonal-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background-color: #6BB187;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Testimonials Section */
+#testimonials {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+#testimonials figure {
+  margin: 24px 0;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0;
+  padding: 12px 16px;
+  border-left: 4px solid #EF9FB0;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+/* Visit Us Section */
 iframe {
   width: 100%;
   height: 350px;
@@ -62,4 +132,61 @@ iframe {
 /* Footer */
 footer {
   margin-top: 48px;
+  background-color: #F8F5F2;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.footer-links {
+  margin: 12px 0;
+}
+
+.footer-links a {
+  color: #6BB187;
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  text-decoration: underline;
+}
+
+.footer-social {
+  font-size: 0.9rem;
+  color: #6B7280;
+}
+
+/* Small Screen Styles */
+@media (max-width: 600px) {
+  .nav-site {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 700px) {
+  #testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* Extra Styling */
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main li {
+  margin: 6px 0;
 }
